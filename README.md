@@ -5,7 +5,7 @@ toybrick()
 
 The resulting models can be made real through 3D printers or CNC machines.
 
-This is an example of how to use OpenSCAD. That's all.
+This is an example of how to use OpenSCAD to program 3D models and thinking in terms of constructive solid geometry. Follow along...
 
 ### Intro to OpenSCAD
 
