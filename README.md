@@ -29,8 +29,8 @@ It outputs a 3D model.
 
 > Pssst! Did you know GitHub has an **[interactive 3D viewer](examples/toybrick-4x2.stl)**? Mind. Blown.
 
-| Code                                                   | Top                                               | Bottom                                               |
-|:------------------------------------------------------:|:-------------------------------------------------:|:----------------------------------------------------:|
+| Code                                                      | Top                                               | Bottom                                               |
+|:---------------------------------------------------------:|:-------------------------------------------------:|:----------------------------------------------------:|
 | `toybrick(1,1)`  [3D viewer](examples/toybrick-1x1.stl)   | ![1x1-top](examples/images/toybrick-1x1-01.png)   | ![1x1-bottom](examples/images/toybrick-1x1-02.png)   |
 | `toybrick(4,2)`  [3D viewer](examples/toybrick-4x2.stl)   | ![4x2-top](examples/images/toybrick-4x2-01.png)   | ![4x2-bottom](examples/images/toybrick-4x2-02.png)   |
 | `toybrick(5,3)`  [3D viewer](examples/toybrick-5x3.stl)   | ![5x3-top](examples/images/toybrick-5x3-01.png)   | ![5x3-bottom](examples/images/toybrick-5x3-02.png)   |
@@ -139,4 +139,29 @@ module toybrick(units_wide, units_long) {
 * [toybrick-dimensions.scad](toybrick-dimensions.scad)
 * [example1.scad](example1.scad) (standalone example)
 
+### Building on it
 
+Now we have a basic `toybrick()` we can make programs that use it to make other things.
+
+Like a **pyramid**:
+
+```scad
+layers = 6;
+
+for (i = [ 1 : layers ]) {
+  translate([length * i * -1,
+             length * i * -1,
+             height * (i * -1 + layers)]) {
+    toybrick(i * 2, i * 2);
+  }
+}
+```
+![pyramid](examples/images/pyramid.png)
+
+[3D viewer](examples/pyramid.stl)
+
+### What next?
+
+Go read the [OpenSCAD manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual), look for inspiration on [Thingiverse](http://www.thingiverse.com/search?q=openscad) and [follow me on Twitter](https://twitter.com/joewalnes).
+
+**ABC: Always Be Creating**
