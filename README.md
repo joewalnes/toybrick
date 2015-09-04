@@ -73,6 +73,10 @@ module body(units_wide, units_long) {
 }
 ```
 
+| cube1  | cube2 | difference(cube1, cube2) |
+|:------------:|:-----------:|:-----------:|
+| ![cube1](examples/images/body-1.png) | ![cube2](examples/images/body-2.png) | ![difference(cube1,cube2)](examples/images/body-3.png) |
+
 ##### Stud
 
 Even easier, it's just a `cylinder()` translated to the right place on top of a block:
@@ -87,6 +91,10 @@ module stud(unit_x, unit_y) {
 	}
 }
 ```
+
+| cylinder |
+|:------------:|
+| ![cylinder](examples/images/stud-1.png) |
 
 ##### Inner tube
 
@@ -105,6 +113,10 @@ module tube(unit_x, unit_y) {
 	}
 }
 ```
+
+| cylinder1  | cylinder2 | difference(cylinder1, cylinder2) |
+|:------------:|:-----------:|:-----------:|
+| ![cylinder1](examples/images/tube-1.png) | ![cylinder2](examples/images/tube-2.png) | ![difference(cylinder1,cylinder2)](examples/images/tube-3.png) |
 
 ##### Bringing it all together
 
@@ -132,6 +144,12 @@ module toybrick(units_wide, units_long) {
 	// That's it!
 }
 ```
+
+**Tada!**
+
+| Code                                                      | Top                                               | Bottom                                               |
+|:---------------------------------------------------------:|:-------------------------------------------------:|:----------------------------------------------------:|
+| `toybrick(4,2)`  [3D viewer](examples/toybrick-4x2.stl)   | ![4x2-top](examples/images/toybrick-4x2-01.png)   | ![4x2-bottom](examples/images/toybrick-4x2-02.png)   |
 
 #### The final code:
 
