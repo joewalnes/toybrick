@@ -39,6 +39,8 @@ It outputs a 3D model.
 
 ### Implementation
 
+Woah there. If you skipped the [Programming 3D Objects with OpenSCAD](https://speakerdeck.com/joewalnes/programming-3d-object) deck, go back. It's really short. You need to understand the 4 fundamental concepts first.
+
 ##### High level
 
 A toy brick consists of:
@@ -130,4 +132,11 @@ module toybrick(units_wide, units_long) {
 	// That's it!
 }
 ```
+
+#### The final code:
+
+* [toybrick.scad](toybrick.scad)
+* [toybrick-dimensions.scad](toybrick-dimensions.scad)
+* [example1.scad](example1.scad) (standalone example)
+
 
